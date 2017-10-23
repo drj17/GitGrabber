@@ -1,0 +1,23 @@
+{
+  "name": "gitgrabber",
+  "version": "1.0.0",
+  "description": "github profile grabber built with node",
+  "main": "animal_fun.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon animal_fun.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drj17/GitGrabber.git"
+  },
+  "author": "David Janas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drj17/GitGrabber/issues"
+  },
+  "homepage": "https://github.com/drj17/GitGrabber#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

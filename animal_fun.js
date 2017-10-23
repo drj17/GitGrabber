@@ -13,34 +13,15 @@ const server = http.createServer((req, res) => {
       return;
     }
     let lines = data.split("\n");
-    let firstLetterWords = lines.filter((word) => {
-      return word[0] === letter.toUpperCase();
-    });
-    console.log(firstLetterWords);
-    res.end(firstLetterWords.join('\n'));
+    if(letter !== undefined){
+      let firstLetterWords = lines.filter((word) => {
+        return word[0] === letter.toUpperCase();
+      });
+      res.end(firstLetterWords.join('\n'));
+    } else {
+      res.end(data);
+    }
   });
 });
 
 server.listen(8000, () => console.log("I'm listening on port 8000!"));
-
-
-// let letter = process.argv[2].toUpperCase()
-// fs.readFile('./animals.txt', 'utf-8', (err, data) => {
-//   if(err){
-//     console.log(err)
-//     return
-//   }
-//   let lines = data.split("\n")
-//   let firstLetterWords = lines.filter((word) => {
-//     return word[0] === letter;
-//   })
-//
-//   fs.writeFile(`${letter}-animals.txt`, firstLetterWords, err => {
-//     if (err) {
-//       console.log(err)
-//       return
-//     }
-//     console.log("file successfully wrriten")
-//   })
-//
-// })
